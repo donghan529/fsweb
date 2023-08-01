@@ -7,12 +7,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML+CSS</title>
     <style>
-        div {
-            background: yellow;
+        .div0 {
+            width: 500px;
+            height: 150px;
+            background-color: yellow;
+        }
+        /* 
+            부모/자식/형제
+            선택자 선택자
+            선택자>선택자
+            선택자+선택자
+            선택자~선택자
+        */
+        .div0 ~ div {
+            background-color: yellow;
             width: 500px;
             height: 150px;
             padding: 20px;
-            border: 10px solid black;
+            border: 10px solid yellow;
         }
 
         /* 
@@ -24,21 +36,28 @@
             = 150 + 20*2 + 10*2 
         */
         /* (1) .div1의 box-sizing은 content-box로 지정하시오. */
-
+        .div1 {
+            /* 기본값 */
+            /* width와 height가 border와 padding 지정한만큼 커진다. */
+            box-sizing: content-box;
+        }
 
 
         /* width:500px; height:150px; */
         /* width와 height에 border와 padding 크기가 포함된다. */
+        /* 요소의 안쪽으로 border와 padding 크기가 포함된다. */
         /* (2) .div2의 box-sizing은 border-box로 지정하시오. */
-
-
-
+        .div2 {
+            box-sizing: border-box;
+        }
         
     </style>
 </head>
 
 <body>
     <h1>박스 모델</h1>
+    <div class="div0">박스0</div>
+    <hr>
     <div class="div1">박스1: content-box</div>
     <hr>
     <div class="div2">박스2: border-box</div>

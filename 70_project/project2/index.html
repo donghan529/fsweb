@@ -4,12 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>자이</title>
+    <style>
+        h1 {float: left;}
+        .gnb {float: right;}
+        #sec3, #sec4 {clear: both;}
+        .pr1 > li {
+           float: left;
+           margin: 8px;
+        }
+        .ab1 > li {
+            float: left;
+            margin: 8px;
+        }
+    </style>
 </head>
 <body>
     <!-- 헤더 -->
     <header>
         <h1>로고</h1>
-        <nav class="gnb">내비게이션</nav>
+        <nav class="gnb">
+            <ul>
+                <a href="#"><li>Projects</li></a>
+                <a href="#"><li>About</li></a>
+                <a href="#"><li>Contact</li></a>
+            </ul>
+        </nav>
     </header>
     
     <!-- 섹션2 -->
@@ -21,7 +40,7 @@
     <section id="sec2" class="sec">
         <h3>Projects</h3>
         <div class="pr">
-            <ul>
+            <ul class="pr1">
                 <li>Summer House<img src="/70_project/images/House.jpg" alt="Summer House"></li>
                 <li>Brick House<img src="/70_project/images/House1.jpg" alt="Brick House"></li>
                 <li>Renovated<img src="/70_project/images/House2.jpg" alt="Renovated"></li>
@@ -37,7 +56,7 @@
         <h4>About</h4>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         <div class="about">
-            <ul>
+            <ul class="ab1">
                 <li>
                     <img src="/70_project/images/John.jpg" alt="John Doe">
                     <h3>John Doe</h3>
