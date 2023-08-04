@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>박스 정중앙 배치</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        body > div {
+            position: relative;
+            /* height: 800px;
+            width: 1500px; */
+        }
+        .txt {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            /* 상속 */
+            font-family: "Segoe UI", "Arial", "sans-serif";
+            color: #fff;
+            font-size: 36px;
+            /* margin-left: -24px;
+            margin-top: -10.5px; */
+        }
+        .main_img {
+            margin: 0 auto;
+            width: 1500px
+        }
+        .tit1 {
+            padding: 8px 16px;
+            background-color: #000;
+            /* opacity는 불투명도 0(투명), 1(불투명) */
+            letter-spacing: 4px;
+            opacity: 0.75;
+            /* font-family: "Segoe UI", "Arial", "sans-serif";
+            color: #fff;
+            font-size: 36px; */
+            font-weight: bolder;
+        }
+        /* .tit1 + span {
+            letter-spacing: 4px;
+            font-family: "Segoe UI", "Arial", "sans-serif";
+            color: #fff;
+            font-size: 36px;
+        } */
+        /* 
+            가로 중앙 배치
+            1. 블록레벨 요소 -> margin: 0 auto;
+            2. 인라인 요소 -> text-align: center;
+            3. 이미지는 인라인 요소 따라서 텍스트 처럼
+                text-align:center; 사용하여 가운데 배치할 수 있다.
+        */
+        /* .main_img {
+            text-align: center;
+        } */
+    </style>
+</head>
+<body>
+    <div>
+        <div class="main_img">
+            <img src="../assets/images/Architecture.jpg" alt="이미지">
+        </div>
+        <div class="txt">
+            <span class="tit1"><b>BG</b></span>
+            <span>Binggrae</span>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>탭</title>
+    <style>
+        /* reset(초기화) */
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        /* 탭 */
+        /* 버튼 */
+        #taps .btn li {
+            /* float:left; */
+            display: inline-block;
+            background-color: lightgreen;
+            padding: 8px 16px;
+        }
+
+        /* 내용 공통 */
+        #taps div {
+            position: absolute;
+            top: 40px;
+            width: 400px;
+            height: 160px;
+        }
+
+        /* 공지사항 */
+        #tap1 {
+            background-color: lightblue;
+        }
+
+        #tap1 li {
+            border-bottom: 1px solid red;
+            padding-bottom: 8px;
+            margin: 8px 0;
+            /* 숫자 0은 단위 생략 가능 */
+        }
+
+        #tap1 span {
+            display: inline-block;
+            width: 310px;
+        }
+
+        /* 갤러리 */
+        #taps #tap2 {
+            /* box-sizing: border-box; */
+            /* width: calc(400px - 32px); */
+            background-color: lightcoral;
+            padding: 24px 16px;
+        }
+        #tap2 a {
+            margin: 0 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 탭 -->
+    <div id="taps">
+        <!-- 버튼 영역 -->
+        <ul class="btn">
+            <li><a href="#tap1">공지사항</a></li>
+            <li><a href="#tap2">갤러리</a></li>
+        </ul>
+        <!-- 내용 영역 -->
+        <div id="tap1">
+            <ul>
+                <li><a href="#"><span>맞춤 플랜을 제안하는 크리에이티브...</span>2023-08-02</a></li>
+                <li><a href="#"><span>JUST 쇼핑몰과 함께 하실 가슴 따뜻한...</span>2023-08-02</a></li>
+                <li><a href="#"><span>코리아웨딩페어 결혼박람회가 열립니다.</span>2023-08-02</a></li>
+                <li><a href="#"><span>마진없이 아낌없이 드리는 마지막 찬스!</span>2023-08-02</a></li>
+            </ul>
+        </div>
+        <div id="tap2">
+            <a href="#"><img src="../assets/images/gallery1.png" alt="갤러리1"></a>
+            <a href="#"><img src="../assets/images/gallery2.png" alt="갤러리2"></a>
+            <a href="#"><img src="../assets/images/gallery3.png" alt="갤러리3"></a>
+        </div>
+    </div>
+</body>
+
+</html>

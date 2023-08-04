@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>탭</title>
+    <style>
+        body {margin: 0;}
+        ul {
+            margin: 0; padding: 0;
+            list-style: none;
+        }
+
+        /* 탭 */
+        #taps li {
+            /* float:left; */
+            display: inline-block;
+            background-color: lightgreen;
+            padding: 8px 16px;
+        }
+        #taps div {
+            position: absolute;
+            top: 40px;
+            width: 400px;
+            height: 200px;
+        }
+        #tap1 {
+            background-color: lightblue;
+        }
+        #tap2 {
+            background-color: lightcoral;
+        }
+    </style>
+</head>
+<body>
+    <!-- 탭 -->
+    <div id="taps">
+        <!-- 버튼 영역 -->
+        <ul class="btn">
+            <li><a href="#tap1">메뉴1</a></li><li><a href="#tap2">메뉴2</a></li>
+        </ul>
+        <!-- 내용 영역 -->
+        <div id="tap1">첫 번째 내용</div>
+        <div id="tap2">두 번째 내용</div>
+    </div>
+</body>
+</html>
