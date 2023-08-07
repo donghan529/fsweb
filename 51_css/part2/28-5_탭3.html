@@ -21,16 +21,17 @@
         }
 
         /* 탭 */
-        /* 버튼 */
-        #taps .btn li {
-            /* float:left; */
-            display: inline-block;
-            background-color: lightgreen;
-            padding: 8px 16px;
+        #tabs input {
+            display:none;
+        }
+
+        #tabs input:checked + div {
+            display:block;
         }
 
         /* 내용 공통 */
-        #taps div {
+        #tabs div {
+            display:none;
             position: absolute;
             top: 40px;
             width: 400px;
@@ -38,44 +39,42 @@
         }
 
         /* 공지사항 */
-        #tap1 {
+        #tab1 {
             background-color: lightblue;
         }
 
-        #tap1 li {
+        #tab1 li {
             border-bottom: 1px solid red;
             padding-bottom: 8px;
             margin: 8px 0;
             /* 숫자 0은 단위 생략 가능 */
         }
 
-        #tap1 span {
+        #tab1 span {
             display: inline-block;
             width: 310px;
         }
 
         /* 갤러리 */
-        #taps #tap2 {
+        #tabs #tab2 {
             /* box-sizing: border-box; */
             /* width: calc(400px - 32px); */
             background-color: lightcoral;
             padding: 24px 16px;
         }
-        #tap2 a {
+        #tab2 a {
             margin: 0 4px;
         }
     </style>
 </head>
 
 <body>
-    <div id="contents">
     <!-- 탭 메뉴 -->
-        <div class="tabs">
-            <ul class="btn">
-                <a href="#tab1"><li>공지사항</li></a>
-                <a href="#tab2"><li>갤러리</li></a>
-            </ul>
-        <div class="tab1">
+    <div id="tabs">
+        <!-- 공지사항 -->
+        <label for="btn1">공지사항</label>
+        <input type="radio" name="tabs" id="btn1" checked>
+        <div id="tab1">
             <ul>
                 <li><a href="#"><span>맞춤 플랜을 제안하는 크리에이티브...</span>2023.07.20</a></li>
                 <li><a href="#"><span>빙그레와 함께 하실 가슴 따뜻한...</span>2023.06.12</a></li>
@@ -83,11 +82,15 @@
                 <li><a href="#"><span>마진없이 아낌없이 드리는 마지막 찬스!</span>2023.02.01</a></li>
             </ul>
         </div>
-        <div class="tab2">
-            <a href="#"><img src="../images/gallery1.png" alt="갤러리1"></a>
-            <a href="#"><img src="../images/gallery2.png" alt="갤러리2"></a>
-            <a href="#"><img src="../images/gallery3.png" alt="갤러리3"></a>
+        <!-- 갤러리 -->
+        <label for="btn2" class="tab2">갤러리</label>
+        <input type="radio" name="tabs" id="btn2">
+        <div id="tab2">
+            <a href="#"><img src="../assets/images/gallery1.png" alt="갤러리1"></a>
+            <a href="#"><img src="../assets/images/gallery2.png" alt="갤러리2"></a>
+            <a href="#"><img src="../assets/images/gallery3.png" alt="갤러리3"></a>
         </div>
+    </div>  
 </body>
 
 </html>
