@@ -55,11 +55,11 @@ header {
     top: 50%;
     margin-top: -10px;
     margin-left: -80px;
-    color: #fff;
+    color: #be1414;
 }
 .tit1 {
     padding: 8px 16px;
-    background-color: #000;
+    background-color: #000000;
     opacity: .75;
 }
 /* 섹션2,3 공통 */
@@ -85,6 +85,7 @@ header {
     color: aliceblue;
     background-color: #222;
     padding: 8px 16px;
+    font-size: 8px;
 }
 
 /* 섹션3 */
