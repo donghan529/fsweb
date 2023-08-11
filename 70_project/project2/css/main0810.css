@@ -2,7 +2,10 @@
 /* 초기화 */
 * {box-sizing: border-box;}
 body, h1, ul {margin: 0;}
-ul {padding: 0;}
+ul {
+    list-style: none;
+    padding: 0;
+}
 img {width: 100%;}
 .clearfix::after {
     content: '';
@@ -16,7 +19,10 @@ header {background-color: lightblue;}
 #sec1 {background-color: lightcoral;}
 #sec2 {background-color: lightgray;}
 #sec3 {background-color: lightslategray;}
-#sec4 {background-color: lightseagreen;}
+#sec4 {
+    background-color: lightseagreen;
+    height: 1210px;
+}
 footer {background-color: lightblue;}
 
 /* 헤더 */
@@ -91,12 +97,19 @@ header {
 /* 섹션3 */
 
 /* 섹션4 */
+#sec4 h2 {
+    margin: 10px 0;
+    padding: 16px 0;
+}
+#sec4 p {
+    margin-bottom: 8px;
+}
 #sec4 input {
-    width: 672px;
+    width: 1500px;
     height: 40.5px;
     border: 1px soli #ccc;
     padding: 8px;
-    margin: 16px 0;
+    margin: 8px 0;
 }
 #sec4 button {
     width: 153.5px;
@@ -107,3 +120,13 @@ header {
     padding: 8px 16px;
 }
 /* 푸터 */
+footer {
+    height: 84.5px;
+    text-align: center;
+    margin-top: 16px;
+}
+footer p {
+    line-height: 84.5px;
+    text-align: center;
+    margin: 15px 0;
+}

@@ -2,8 +2,14 @@
 /* 초기화 */
 * {box-sizing: border-box;}
 body, h1, ul {margin: 0;}
-ul {padding: 0;}
-img {width: 100%;}
+ul {
+    list-style: none;
+    padding: 0;
+}
+img {
+    vertical-align: top;
+    width: 100%;
+}
 .clearfix::after {
     content: '';
     display: block;

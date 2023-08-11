@@ -7,28 +7,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML+CSS</title>
     <style>
+        /* 
+        목록의 마커
+        list-style-type: 유형;
+        <ul>,<ol>값: none(없음)
+        <ul>값: disc, circle, square
+        <ol>값: decimal, decimal-leading-zero, 
+                upper-alpha, lower-alpha, 
+                upper-roman, lower-roman, ...
+
+        list-style-image: url('경로/이미지파일');
+        list-style-position: 위치;
+            값: outside(기본값), inside -> <li>태그 기준
+        
+        (속기형)
+        list-style: type [|image] [position];
+        */
+
         /* <ul>에 사용 */
         /* disc */
-
+        .lst1 {
+            border: 1px solid red;
+            list-style-type: disc;
+            list-style-image: url(../assets/images/Star1.png);
+            /* list-style-position: outside; */
+        }
         /* circle */
-
+        /* 목록 속성은 <ul>,<ol>,<li> 지정한다. */
+        .lst2 li {
+            border: 1px solid red;
+            /* list-style-type: circle;
+            list-style-image: url(../assets/images/Star3.svg);
+            list-style-position: inside; */
+            list-style: circle url(../assets/images/Star3.svg) inside;
+        }
         /* square */
-
+        .lst3 {list-style-type: square;}
         /* <ul>,<ol>에 모두 사용 - 항목 마커 제거 */
-
+        .lst10 {
+        /* list-style-type: none; */
+        list-style: none;
+        }
         /* <ol>에 사용 */
         /* decimal */
-        
+        .lst4 {list-style-type: decimal;}
         /* decimal-leading-zero */
-
+        .lst5 {list-style-type: decimal-leading-zero;}
         /* upper-alpha */
-
+        .lst6 {list-style-type: upper-alpha;}
         /* lower-alpha */
-
+        .lst7 {list-style-type: lower-alpha;}
         /* upper-roman */
-
+        .lst8 {list-style-type: upper-roman;}
         /* lower-roman */
-
+        .lst9 {list-style-type: lower-roman;}
+        /* 기타 */
+        .lst11 {list-style-type: lower-greek;}
+        
     </style>
 </head>
 
@@ -41,6 +76,7 @@
         <li>카페라떼</li>
     </ul>
     <ul class="lst2">
+    <!-- <ul class="lst2" type="square"> -->
         <li>아메리카노</li>
         <li>카페모카</li>
         <li>카페라떼</li>
@@ -57,7 +93,9 @@
     </ul>
 
     <h2>순서 있는 목록</h2>
+    <!-- type="1|A|a|I|i" -->
     <ol class="lst4">
+    <!-- <ol class="lst4" type="I"> -->
         <li>아메리카노</li>
         <li>카페모카</li>
         <li>카페라떼</li>
@@ -82,10 +120,10 @@
         <li>카페모카</li>
         <li>카페라떼</li>
     </ol>
-    <ol class="lst9">
-        <li>아메리카노</li>
-        <li>카페모카</li>
-        <li>카페라떼</li>
+    <ol class="lst9" start="4">
+        <li>딸기우유</li>
+        <li>초코우유</li>
+        <li>커피우유</li>
     </ol>
     <ol class="lst11">
         <li>아메리카노</li>
