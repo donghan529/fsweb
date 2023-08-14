@@ -1,18 +1,6 @@
 @charset "utf-8";
-/* 초기화 */
-* {box-sizing: border-box;}
-body, h1, ul {margin: 0;}
-ul {
-    list-style: none;
-    padding: 0;
-}
-img {width: 100%;}
-.clearfix::after {
-    content: '';
-    display: block;
-    clear: both;
-}
-
+@import url(reset.css);
+@import url(typo0810.css);
 /* 와이어프레임 */
 header {background-color: lightblue;}
 .sec {height: 800px;}
@@ -39,11 +27,20 @@ header {
 .logo {
     float: left;
 }
+.logo img {
+    vertical-align: middle;
+    padding: 8px 16px;
+}
 /* 네비게이션 */
 #gnb {float: right;}
 #gnb li {
     display: inline-block;
     margin: 0 16px;
+}
+#gnb a {
+    line-height: 55px;
+    height: 38.5px;
+    padding: 8px 16px;
 }
 /* 섹션 공통 */
 .sec {
@@ -60,7 +57,7 @@ header {
     left: 50%;
     top: 50%;
     margin-top: -10px;
-    margin-left: -80px;
+    margin-left: -80px; 
     color: #be1414;
 }
 .tit1 {

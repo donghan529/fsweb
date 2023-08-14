@@ -1,0 +1,9 @@
+@charset "utf-8";
+html {font-size: 10px;}
+body {
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+.txt {
+    font-size: 3.5rem;
+}

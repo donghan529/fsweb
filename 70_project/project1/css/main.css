@@ -17,7 +17,12 @@ img {
     vertical-align: top;
 }
 
-/* typo */
+/* 
+    typo - 글꼴, 크기, 색, 줄간격, 자간, 굻기, 기울임, 밑줄
+    font: 굵기 기울임 크기/줄간격 글꼴;
+    letter-spacing
+    color: 글자색
+*/
 html {font-size: 10px;}
 body {
     font: 1.5rem/1.6 'Noto Sans KR', sans-serif ;
@@ -34,12 +39,9 @@ a {
     font-size: 1.4rem;
     color: #777;
 }
-.blogo {
-    text-align: right;
-}
 .copy {
+    line-height: 50px;
     color: #777;
-    text-align: center;
 }
 .copy p:last-of-type {
     font-size: 1.2rem;
@@ -171,31 +173,37 @@ label {
 /* footer */
 footer {
     height: 100px;
-    background-color: #1f1f1f;
+    background: linear-gradient(#1f1f1f, #1a1a1a);
     color: rgba(255,255,255, 0.7);
-    padding: 30px;
+    padding: 0 30px;
 }
 /* a 태그는 글자색을 별도 지정한다. */
 footer a {
     color: rgba(255,255,255, 0.7);
 }
-footer > div {
-    float: left;
-}
 
 /* 하단로고 */
-.blogo {
-    width: 200px;
-}
+
 /* 주소 및 저작권 */
 .copy {
-    width: 640px;
+    float: left;
+    background: url(../../images/flogo.svg) no-repeat 100px 50%/170px;
+    padding-left: 300px;
 }
 /* SNS */
 .sns {
+    float: right;
     width: 300px;
+    line-height: 100px;
 }
 .sns li {
     float: left;
     margin: 0 8px;
+}
+.sns a {
+    display: inline-block;
+    height: 100px;
+}
+.sns img {
+    vertical-align: middle;
 }
