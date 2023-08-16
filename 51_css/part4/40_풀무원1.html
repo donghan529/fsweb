@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>풀무원</title>
+    <style>
+        /* 초기화 */
+        * {margin: 0; padding: 0; box-sizing: border-box;}
+        li {list-style: none;}
+
+        /* 타이포: 글꼴, 크기, 색, 줄간격, 자간, 스타일(굵기, 기울기, 밑줄) */
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
+        html {font-size: 10px;}
+        body {
+            font: 1.5rem/1.5 'Noto Sans KR', sans-serif;
+            letter-spacing: -1; 
+            color: #333;
+        }
+        h2 {
+            font-size: 4.5rem;
+            font-weight: normal;
+    }
+        p {
+            font-size: 2rem;
+        }
+        dl {
+            color: #fff;
+        }
+        dt {
+            font-size: 2.4rem;
+            font-weight: 700;
+        }
+        dd {
+            font-size: 1.8rem;
+        }
+
+        /* 섹션 공통 */
+        /* 
+            display:
+                none, block, inline, inline-block
+                list-item -> <li>
+                table-cell -> <td>,<th>
+            vertical-align: 수직 정렬; -> 인라인 요소, 테이블 셀
+        */
+        section {
+            height: 100vh;
+        }
+        /* 섹션1 */
+        #sec1 {
+            background: #ece9de;
+            padding-top: 143px;
+        }
+
+        .container {
+            /* 요소를 가로/세로 중앙 배치하기 */
+            /* position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -590px;
+            margin-top: -122px; */
+            /* 
+                transform: translate(-50%,-50%); 
+                #sec1에 display:table; width:100%
+                .container에 display:table-cell; vertical-align:middle;
+                .inner에 width:1179px, margin: 0 auto;
+            */
+
+            /* <li>가로 크기가 393 * 3 = 1179 */
+            /* 블록레벨요소의 가로 가운데 배치 */
+            width: 1179px;
+            margin: 0 auto;
+        }
+        .container p {
+            margin: 30px 0 54px 0;
+        }
+        ul::after {
+            /* height: 493px; */
+            /* overflow: hidden; */
+            content: '';
+            display: block;
+            clear: both;
+        }
+        li {
+            position: relative;
+            float: left;
+            width: 393px;
+            height: 493px;
+            background: no-repeat 50% 50%;
+            text-align: center;
+        }
+        /* 호버전 */
+        li:nth-of-type(1) {
+            /* 이미지크기: 393*493 */
+            /* 파일/폴더 명명 규칙 */
+            /* background-image: url(),url(),... */
+            background-image: url(풀무원/s01_list_icon_1.png), url(풀무원/s01_list_img1.jpg);
+        }
+        li:nth-of-type(2) {
+            background-image: url(풀무원/s01_list_icon_2.png), url(풀무원/s01_list_img2.jpg);
+        }
+        li:nth-of-type(3) {
+            background-image: url(풀무원/s01_list_icon_3.png), url(풀무원/s01_list_img3.jpg);
+        }
+        /* 호버후 */
+        li:nth-of-type(1):hover {
+            background-color: #3F3D33;
+            background-image: url(풀무원/s01_list_icon_1_on.png);
+        }
+        li:nth-of-type(2):hover {
+            background-color: #2C3F46;
+            background-image: url(풀무원/s01_list_icon_2_on.png);
+        }
+        li:nth-of-type(3):hover {
+            background-color: #729246;
+            background-image: url(풀무원/s01_list_icon_3_on.png);
+        }
+        /* 
+            position: absolute; 
+                1. 요소의 width:콘텐츠;
+                2. margin:0 auto; 통하지 않는다.
+                3. left: 50%; margin-left:-width/2;
+        */
+        /* li에 마우스를 올리면 dl의 opacity:1;로 한다. */
+        li:hover dl {
+            opacity: 1;
+        }
+        dl {
+            position: absolute;
+            width: 100%;
+            top: 314px;
+            /* left: 50%;
+            margin-left: -120px; */
+            opacity: 0;
+            transition: .5s;
+        }
+        dt {
+            /* padding-bottom: 6px; */
+            margin-bottom: 12px;
+            /* border-bottom: 1px solid #fff; */
+        }
+        dt::after {
+            content: '';
+            width: 240px;
+            height: 2px;
+            display: block;
+            margin: 6px auto 0;
+            background: #fff;
+        }
+        span {
+            display: block;
+        }
+
+        /* 섹션2 */
+        #sec2 {background: #7F9F52;}
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <!-- 섹션1 -->
+        <section id="sec1">
+            <div class="container">
+                    <h2>바른먹거리</h2>
+                    <p>나와 내 가족의 건강, 더 나아가 지구환경의 건강까지 두루 살핍니다.</p>
+                    <ul>
+                        <li>
+                            <dl>
+                                <dt>바른먹거리</dt>
+                                <dd>
+                                    <span>내 가족의 건강과 행복을 위한</span>
+                                    <span>바른먹거리는 무엇일까요?</span>
+                                </dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt>로하스</dt>
+                                <dd>
+                                    <span>여러분도 로하스 식생활을</span>
+                                    <span>시작해보세요</span>
+                                </dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt>바른먹거리 캠페인</dt>
+                                <dd>
+                                    <span>어렸을 때 입맛이 평생 건강</span>
+                                    <span>&nbsp;</span>
+                                </dd>
+                            </dl>
+                        </li>
+                    </ul>
+            </div><!-- //.container -->
+        </section>
+
+        <!-- 섹션2 -->
+        <section id="sec2">
+            <h2>풀무원</h2>
+            <p>풀무원 정신은 스스로 일군 풀무원농장에서 유기농을 통해 이웃사랑, 생명존중을 실천하는 데 한평생을 바쳤던 위대한 농부이자 성실한 평화주의자 원경선으로부터 시작합니다.</p>
+            <ul>
+                <li>
+                    <dl>
+                        <dt>가치체계</dt>
+                        <dd>
+                            <span>로하스 기업 풀무원의</span>
+                            <span>미션을 소개합니다.</span>
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>히스토리</dt>
+                        <dd>
+                            <span>사람과 자연을 함께</span>
+                            <span>사랑해온 풀무원의 시간.</span>
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>사회책임경영</dt>
+                        <dd>
+                            <span>지속가능한 사회와</span>
+                            <span>지구환경을 위한 경영활동.</span>
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>풀무원 사업</dt>
+                        <dd>
+                            <span>고객과 함께 만든</span>
+                            <span>풀무원의 사업들.</span>
+                        </dd>
+                    </dl>
+                </li>
+            </ul>
+        </section>
+    </div>
+</body>
+</html>
