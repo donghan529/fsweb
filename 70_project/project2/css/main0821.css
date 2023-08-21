@@ -1,16 +1,29 @@
 @charset "utf-8";
 @import url(reset.css);
-@import url(typo0810.css);
+/* 초기화 */
+* {box-sizing: border-box;}
+body, h1, ul {margin: 0;}
+ul {
+    list-style: none;
+    padding: 0;
+}
+img {
+    vertical-align: top;
+    width: 100%;
+}
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
 /* 와이어프레임 */
 header {background-color: lightblue;}
 .sec {height: 800px;}
 #sec1 {background-color: lightcoral;}
 #sec2 {background-color: lightgray;}
 #sec3 {background-color: lightslategray;}
-#sec4 {
-    background-color: lightseagreen;
-    height: 1210px;
-}
+#sec4 {background-color: lightseagreen;}
 footer {background-color: lightblue;}
 
 /* 헤더 */
@@ -27,20 +40,11 @@ header {
 .logo {
     float: left;
 }
-.logo img {
-    vertical-align: middle;
-    padding: 8px 16px;
-}
 /* 네비게이션 */
 #gnb {float: right;}
 #gnb li {
     display: inline-block;
     margin: 0 16px;
-}
-#gnb a {
-    line-height: 55px;
-    height: 38.5px;
-    padding: 8px 16px;
 }
 /* 섹션 공통 */
 .sec {
@@ -57,7 +61,7 @@ header {
     left: 50%;
     top: 50%;
     margin-top: -10px;
-    margin-left: -80px; 
+    margin-left: -80px;
     color: #be1414;
 }
 .tit1 {
@@ -92,38 +96,5 @@ header {
 }
 
 /* 섹션3 */
-
 /* 섹션4 */
-#sec4 h2 {
-    margin: 10px 0;
-    padding: 16px 0;
-}
-#sec4 p {
-    margin-bottom: 8px;
-}
-#sec4 input {
-    width: 1500px;
-    height: 40.5px;
-    border: 1px soli #ccc;
-    padding: 8px;
-    margin: 8px 0;
-}
-#sec4 button {
-    width: 153.5px;
-    height: 38.5px;
-    background-color: #111;
-    color: #fff;
-    margin: 16px 0;
-    padding: 8px 16px;
-}
 /* 푸터 */
-footer {
-    height: 84.5px;
-    text-align: center;
-    margin-top: 16px;
-}
-footer p {
-    line-height: 84.5px;
-    text-align: center;
-    margin: 15px 0;
-}

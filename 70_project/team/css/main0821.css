@@ -18,13 +18,7 @@ footer {
     margin: 0 auto;
 }
 /* 헤더 */
-.gnb h1 {
-    float: left;
-}
-.gnb li {
-    display: inline-block;
-    float: right;
-}
+
 /* 섹션공통 */
 .sec {
     width: 1440px;
