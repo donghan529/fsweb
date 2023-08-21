@@ -2,6 +2,7 @@
 @import url(reset.css);
 @import url(typo.css);
 /* 와이어프레임 */
+/* * {border: 1px solid red;} */
 header {
     width: 1440px;
     background-color: lightblue;
@@ -24,33 +25,87 @@ footer {
     height:1200px;
     margin: 0 auto;
 }
+.sec h2, .sec h3, .sec p {text-align: center;}
 
 /* 섹션1 */
-#sec1 h2, #sec1 p {
-    text-align: center;
-}
-.inner {
+.outer {
+    /* position: relative; */
     float: left;
     width: 720px;
     height: 220px;
     text-align: center;
 }
-.inner1 span {
-    display: inline-block;
+.inner1 {
     position: relative;
+    width: 195px;
+    top: 50px;
+    left: 400px;
+}
+.inner2 {
+    position: relative;
+    width: 195px;
     top: 50px;
     left: 100px;
 }
-.inner2 span {
-    display: inline-block;
+.clearfix > li:nth-of-type(odd) {
+    margin-left: 150px;
+}
+.clearfix > li:nth-of-type(even) {
+    margin-right: 150px;
+}
+.img {
+    width: 570px;
+    height: 400px;
+    float: left;
+}
+
+/* 섹션2 */
+#sec2 li {
+    text-align: center;
+}
+.parallax1 {
+    width: 1440px;
+    height: 200px;
+}
+#sec2 ol {
+    list-style: none;
+}
+#sec2 ol > li {
+    float: left;
+}
+
+#sec2 {
     position: relative;
-    top: 50px;
-    right: 100px;
+
+}
+#sec2 .step {
+    width: 192px;
+    height: 192px;
+    border: 4px solid green;
+    border-radius: 100px;
+}
+.step span {
+    height: 26px;
+    line-height: 26px;
+    display: block;
+}
+.step span:nth-of-type(1) {
+    margin-top: 70px;
+}
+#sec2 p:nth-of-type(2) {
+    position: absolute;
+    left: 10px;
+    top: 600px;
+    opacity: 0.75;
 }
 
 
-/* 섹션2 */
 
 /* 섹션3 */
-
+#sec3 .parallax2 {
+    width: 1440px;
+    height: 310px;
+    text-align: center;
+    line-height: 155px;
+}
 /* 푸터 */
