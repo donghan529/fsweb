@@ -1,0 +1,163 @@
+@charset "utf-8";
+/* 타이포 */
+html {font-size: 10px;}
+body {
+        font: 1.5rem/1.5 'Noto Sans KR', sans-serif;
+    }
+.txt {
+    font-size: 3.5rem;
+}
+/* 초기화 */
+* {box-sizing: border-box;}
+body, h1, h2, ul, p {margin: 0;}
+ul {
+    list-style: none;
+    padding: 0;
+}
+img {
+    vertical-align: top;
+    width: 100%;
+}
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+/* 와이어프레임 */
+header {background-color: lightblue;}
+#sec1 {height: 855px;}
+#sec2 {height: 650px;}
+#sec3 {height: 650px;}
+#sec4 {height: 1220px;}
+footer {background-color: lightblue;}
+
+/* 헤더 */
+header {
+    z-index: 9999;
+    position: fixed;
+    width: 100%;
+    height: 55px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+    background-color: #fff;
+}
+
+/* 로고 */
+.logo {
+    float: left;
+}
+.logo img {
+    vertical-align: middle;
+    padding: 8px 16px;
+}
+/* 네비게이션 */
+#gnb {float: right;}
+#gnb li {
+    display: inline-block;
+    margin: 0 16px;
+}
+#gnb a {
+    line-height: 55px;
+    height: 38.5px;
+    padding: 8px 16px;
+    text-decoration: none;
+    color: black;
+}
+/* 섹션 공통 */
+.sec {
+    position: relative;
+    width: 1500px;
+    margin: 0 auto;
+}
+/* 섹션1 */
+#sec1 {
+    top: 55px;
+}
+.txt {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    color: #be1414;
+}
+.tit1 {
+    padding: 8px 16px;
+    background-color: #000000;
+    opacity: .75;
+}
+/* 섹션2,3 공통 */
+.sec23 li {
+    float: left;
+    width: 360px;
+    height: 240px;
+    margin-right: 20px;
+}
+.sec23 li:nth-of-type(4n) {
+    margin-right: 0;
+}
+
+/* 섹션2 */
+.sec2h2 {
+    height: 153px;
+    padding-top: 32px;
+}
+#sec2 h2 {
+    margin-top: 32px;
+}
+#sec2 li {
+    position: relative;
+    margin-bottom: 16px;
+}
+#sec2 span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: aliceblue;
+    background-color: #222;
+    padding: 8px 16px;
+    font-size: 8px;
+}
+
+/* 섹션3 */
+.sech2p h2 {
+    margin: 48px 0 32px 0;
+}
+.sech2p {
+    height: 240px;
+    padding: 16px 0;
+}
+.sech2p p {
+    margin-top: 8px;
+}
+
+/* 섹션4 */
+#sec4 h2 {
+    height: 69px;
+    margin-top: 48px;
+}
+#sec4 form {
+    margin-bottom: 32px;
+}
+#sec4 input {
+    width: 1500px;
+    height: 40.5px;
+    border: 1px soli #ccc;
+    padding: 8px;
+    margin: 8px 0;
+}
+#sec4 button {
+    width: 153.5px;
+    height: 38.5px;
+    background-color: #111;
+    color: #fff;
+    margin: 16px 0;
+    padding: 8px 16px;
+}
+/* 푸터 */
+footer {
+    height: 84.5px;
+}
+footer p {
+    line-height: 84.5px;
+    text-align: center;
+    margin: 15px 0;
+}
