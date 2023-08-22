@@ -8,10 +8,9 @@ header {
     background-color: lightblue;
     margin: 0 auto;
 }
-#sec1 {background-color: lightcoral;}
+/* #sec1 {background-color: lightcoral;} */
 #sec2 {background-color: lightgray;}
 #sec3 {background-color: lightslategray;}
-#sec4 {background-color: lightseagreen;}
 footer {
     background-color: lightblue;
     width: 1440px;
@@ -28,7 +27,7 @@ footer {
 .sec h2, .sec h3, .sec p {text-align: center;}
 
 /* 섹션1 */
-.outer {
+.outer1, .outer2 {
     /* position: relative; */
     float: left;
     width: 720px;
@@ -40,6 +39,12 @@ footer {
     width: 195px;
     top: 50px;
     left: 400px;
+}
+.outer1:hover {
+    background: url(/70_project/team/images/bg_nation.jpg) no-repeat;
+}
+.outer2:hover {
+    background: url(/70_project/team/images/bg_store.jpg) no-repeat;
 }
 .inner2 {
     position: relative;
@@ -53,10 +58,27 @@ footer {
 .clearfix > li:nth-of-type(even) {
     margin-right: 150px;
 }
+.img:hover ul {
+    opacity: 1;
+}
 .img {
+    position: relative;
     width: 570px;
     height: 400px;
     float: left;
+}
+.img h4 {
+    background-color: #ffc232;
+    line-height: 150px;
+    text-align: center;
+    width: 170px;
+    height: 150px;
+    position: absolute;
+    left: 0;
+    bottom: 90px;
+}
+.img ul {
+    opacity: 0;
 }
 
 /* 섹션2 */
@@ -67,7 +89,16 @@ footer {
     width: 1440px;
     height: 200px;
 }
+.step_wrap {
+    position: relative;
+}
 #sec2 ol {
+    position: absolute;
+    left: 50%
+    transform: translate(-50%, -50%);
+    height: 220px;
+    text-align: center;
+    display: inline-block;
     list-style: none;
 }
 #sec2 ol > li {
