@@ -7,6 +7,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML+CSS</title>
     <style>
+        /* 
+            display:flex;
+                flex-direction
+                flex-wrap
+                flex-flow: row nowrap;
+                justfy-content: 주축 정렬;
+                    값: flex-start: 시작
+                        start: 시작
+                        flex-end: 끝
+                        end: 끝
+                        center: 가운데
+                flex-start와 flex-end는 flex-direction:*-reverse 일때 역으로 적용되나 star와 end는 적용되지 않는다.
+                        space-between: 공간 분배
+                        space-around: 공간 분배
+                        space-evenly: 공간 분배
+                align-content
+                align-items
+
+            text-align: justify;
+            word-break: break-all;
+        */
         .wrap1 {
             margin-bottom:200px;
         }
@@ -22,22 +43,25 @@
         }
 
         /* (1) .jcs에 플렉스 아이템을 주축의 시작에 배치하기 위해 속성을 지정하시오. */
-
+        .jcs {
+            justify-content: flex-start;
+            flex-direction: row-reverse;
+        }
 
         /* (2) .jce에 플렉스 아이템을 주축의 끝에 배치하기 위해 속성을 지정하시오. */
-
+        .jce {justify-content: flex-end;}
 
         /* (3) .jcc에 플렉스 아이템을 주축의 가운데 배치하기 위해 속성을 지정하시오. */
-
+        .jcc {justify-content: center;}
 
         /* (4) .jcsb에 플렉스 아이템을 주축의 양쪽 끝에 배치하고 나머지 공간을 균등 분배하기 위해 속성을 지정하시오. */
+        .jcsb {justify-content: space-between;}
 
-
-        /* (5) .jcsa에 플렉스 아이템의 좌우 공간을 모두 동일하게 하기 위해 속성을 지정하시오. */
-
+        /* (5) .jcsa에 플렉스 아이템의 주변 공간을 모두 동일하게 하기 위해 속성을 지정하시오. */
+        .jcsa {justify-content: space-around;}
 
         /* (6) .jcse에 플렉스 아이템의 크기를 제외한 공간을 모두 동일하게 하기 위해 속성을 지정하시오. */
-
+        .jcse {justify-content: space-evenly;}
 
         
         /* 주축을 세로로 */
@@ -46,6 +70,7 @@
         }
         .wrap2 .container {
             flex-direction: column;
+            /* 플렉스 컨테이너가 자식과 같으면 정렬의 의미가 없다. */
             height: 800px;
         }
     </style>

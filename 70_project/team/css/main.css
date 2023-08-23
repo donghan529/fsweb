@@ -8,38 +8,38 @@ header {
     background-color: lightblue;
     margin: 0 auto;
 }
-#sec1 {background-color: lightcoral;}
+/* #sec1 {background-color: lightcoral;} */
 #sec2 {background-color: lightgray;}
 #sec3 {background-color: lightslategray;}
-#sec4 {background-color: lightseagreen;}
 footer {
     background-color: lightblue;
     width: 1440px;
     margin: 0 auto;
 }
 /* 헤더 */
-.gnb h1 {
-    float: left;
-}
-.gnb li {
-    display: inline-block;
-    float: right;
-}
+
 /* 섹션공통 */
 .sec {
     width: 1440px;
     height:1200px;
     margin: 0 auto;
 }
-.sec h2, .sec h3, .sec p {text-align: center;}
-
 /* 섹션1 */
-.outer {
+.hover {
+    /* display: flex; */
+    /* justify-content: center; */
+}
+.outer1 { 
     /* position: relative; */
     float: left;
     width: 720px;
     height: 220px;
-    text-align: center;
+
+}
+.outer2 {
+    float: right;
+    width: 720px;
+    height: 220px;
 }
 .inner1 {
     position: relative;
@@ -47,25 +47,52 @@ footer {
     top: 50px;
     left: 400px;
 }
+.outer1:hover {
+    background: url(/70_project/team/images/bg_nation.jpg) no-repeat;
+}
+.outer2:hover {
+    background: url(/70_project/team/images/bg_store.jpg) no-repeat;
+}
 .inner2 {
     position: relative;
     width: 195px;
     top: 50px;
     left: 100px;
 }
-.clearfix > li:nth-of-type(odd) {
-    margin-left: 150px;
+.ulouter ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
-.clearfix > li:nth-of-type(even) {
-    margin-right: 150px;
+.img:hover ul {
+    opacity: 1;
 }
 .img {
+    position: relative;
     width: 570px;
     height: 400px;
-    float: left;
+}
+#sec1 h3 {
+    /* height: 100px; */
+}
+.img h4 {
+    background-color: #ffc232;
+    line-height: 150px;
+    text-align: center;
+    width: 170px;
+    height: 150px;
+    position: absolute;
+    left: 0;
+    bottom: 89px;
+}
+.img ul {
+    opacity: 0;
 }
 
 /* 섹션2 */
+#sec2 .parallax1 {
+    background: url(/70_project/team/images/Parallax.png) no-repeat center/cover fixed;
+}
 #sec2 li {
     text-align: center;
 }
@@ -73,12 +100,24 @@ footer {
     width: 1440px;
     height: 200px;
 }
-#sec2 ol {
+.step_wrap ol {
+    display: flex;
     list-style: none;
+    justify-content: space-evenly;
 }
-#sec2 ol > li {
-    float: left;
+.step_wrap {
+    position: relative;
 }
+/* #sec2 ol {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1025px;
+    height: 220px;
+    text-align: center;
+    display: inline-block;
+    list-style: none;
+} */
 
 #sec2 {
     position: relative;
@@ -108,10 +147,16 @@ footer {
 
 
 /* 섹션3 */
+.parallax2 {
+    background: url(/70_project/team/images/Parallax2.png) no-repeat center/cover fixed ;
+}
 #sec3 .parallax2 {
+    color: #fff;
     width: 1440px;
     height: 310px;
     text-align: center;
-    line-height: 155px;
+}
+.parallax2 div {
+    line-height: 310px;
 }
 /* 푸터 */
