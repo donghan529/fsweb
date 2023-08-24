@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>플렉스박스 - 4개 배치</title>
+    <style>
+        /* reset.css */
+        * {box-sizing: border-box;}
+        body,ul {
+            margin: 0;
+        }
+        ul {
+            padding: 0;
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        /* flexiable layout */
+        .container {
+            width: 1500px;
+            margin: 0 auto;
+        }
+        ul {
+            display: flex;
+            justify-content: space-between;
+            /* padding: 0 202px 0 201px; */
+            /* padding: 0 calc(50% - 750px); */
+        }
+        li {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 360px;
+        }
+        a {
+            display: block;
+            width: 100%;
+            border: 1px solid #777;
+            text-align: center;
+            /* height: 60px;
+            line-height: 60px; */
+            padding: 16px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="container">
+            <h2>섹션의 제목</h2>
+            <ul>
+                <li>
+                    <div>
+                        <img src="https://via.placeholder.com/360x240" alt="테스트">
+                        <h3>John Doe</h3>
+                        <p>CEO &amp; Founder</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, earum?</p>
+                    </div>
+                    <a href="#">자세히 보기</a>
+                </li>
+                <li>
+                    <div>
+                        <img src="https://via.placeholder.com/360x240" alt="테스트">
+                        <h3>John Doe</h3>
+                        <p>CEO &amp; Founder</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus maiores dolore ad aliquam, necessitatibus eligendi.</p>
+                    </div>
+                    <a href="#">자세히 보기</a>
+                </li>
+                <li>
+                    <div>
+                        <img src="https://via.placeholder.com/360x240" alt="테스트">
+                        <h3>John Doe</h3>
+                        <p>CEO &amp; Founder</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti sit ratione, ipsum architecto hic inventore possimus quo nobis recusandae animi?</p>
+                    </div>
+                    <a href="#">자세히 보기</a>
+                </li>
+                <li>
+                    <div>
+                        <img src="https://via.placeholder.com/360x240" alt="테스트">
+                        <h3>John Doe</h3>
+                        <p>CEO &amp; Founder</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam dicta sint eaque accusamus ex odio. Quis suscipit voluptate fuga! Explicabo ipsum eligendi vero iure iste?</p>
+                    </div>
+                    <a href="#">자세히 보기</a>
+                </li>
+            </ul>
+        </div>
+    </section>
+</body>
+</html>
