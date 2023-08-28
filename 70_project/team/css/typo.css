@@ -54,6 +54,10 @@ p {
 
 /* sub3 */
 /* 섹션1 */
+#sec1 .img li {
+    font-weight: 700;
+    opacity: 0.75;
+}
 #sec1 span {
     font-size: 3rem;
     text-decoration: underline;
