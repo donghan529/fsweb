@@ -118,7 +118,7 @@
     font-weight: 700;
     word-wrap: normal;
 }
-
+.img li {margin-left: 16px;}
 .img ul {
     opacity: 0;
 }
@@ -200,7 +200,7 @@
 }
 
 .step_wrap li{
-    animation: move 3s infinite 3s;
+    animation: move 6s infinite linear;
 }
 
 @keyframes move {
@@ -208,9 +208,7 @@
         opacity: 0;
         transform: translatey(50px);
     }
-    25% {opacity: 0.25;}
     50% {opacity: 0.5;}
-    75% {opacity: 0.75;}
     100% {
         opacity: 1;
         transform: none;
