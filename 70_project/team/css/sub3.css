@@ -2,8 +2,45 @@
 @import url(hp.css);
 @import url(reset.css);
 @import url(typo.css);
-/* 와이어프레임 */
-/* * {border: 1px solid red;} */
+/* 타이포 */
+/* 섹션1 */
+#sec1 .img li {
+    font-weight: 700;
+    opacity: 0.75;
+}
+#sec1 span {
+    font-size: 3rem;
+    text-decoration: underline;
+}
+#sec1 strong {
+    font-size: 5.4rem;
+    font-weight: bold;
+}
+
+/* 섹션2 */
+#sec2 .parallax1>div {
+    font-size: 2.8rem;
+    word-break: keep-all;
+}
+#sec2 .parallax1>div:last-of-type {
+    color: #ffc232;
+    font-weight: 700;
+}
+#sec2 {
+    font-weight: 300;
+    color: #fff;
+}
+
+/* 섹션3 */
+#sec3 .parallax2>div {
+    font-size: 2.8rem;
+    word-break: keep-all;
+}
+#sec3 .parallax2>div:first-of-type {
+    color: #009223;
+    font-weight: 700;
+}
+
 
 
 
@@ -14,7 +51,6 @@
 .sec {
     position: relative;
     width: 1440px;
-    /* height:1200px; */
     margin: 0 auto;
 }
 
@@ -319,6 +355,9 @@
     width: 160px;
     color: #fff;
     border-radius: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
 }
 #sec3 span {
 height: 50px;

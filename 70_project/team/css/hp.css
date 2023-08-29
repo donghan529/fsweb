@@ -46,13 +46,12 @@ li {
     display: flex;
     justify-content: space-around;
     overflow: hidden;
-    background: #fff;
 }
 
 .wrap:hover {
     transition-duration: 0.3s;
     background: #fff;
-    height: 250px;
+    height: 310px;
 }
 
 .logo {
@@ -139,17 +138,21 @@ footer {
     justify-content: center;
     align-items: center;
     font-size: 1rem;
+    
 
 }
 
 .bcon>li {
+    height: 200px;
     width: 320px;
     text-align: center;
     line-height: 20px;
+    
 }
 
 
 .bmn {
+    
     display: inline-block;
     height: 40px;
     line-height: 50px;
