@@ -7,3 +7,7 @@ body {
 .txt {
     font-size: 3.5rem;
 }
+
+#sec2 li>span {
+    font-size: 1.6rem;
+}
