@@ -95,12 +95,12 @@
         <section id="sec4" class="sec">
             <h2>가맹점 창업안내</h2>
             <p>담당자에게 신청서를 작성하여 창업상담을 받으실 수 있으며, 점포 물색에 도움을 드립니다.</p>
-            <form action="twosome.jsp">
-                <input type="text" placeholder="Name">
-                <input type="text" placeholder="Email">
-                <input type="text" placeholder="Subject">
-                <input type="text" placeholder="Comment">
-                <button>SEND MESSAGE</button>
+            <form action="twosome.jsp" method="post">
+                <input name="user_name" type="text" placeholder="이름">
+                <input name="user_email" type="email" placeholder="메일">
+                <input name="user_subject" type="text" placeholder="제목">
+                <input name="user_comment" type="text" placeholder="내용">
+                <button type="submit">SEND MESSAGE</button>
             </form>
             <div>
                 <img src="../images/map.png" alt="투썸플레이스">
