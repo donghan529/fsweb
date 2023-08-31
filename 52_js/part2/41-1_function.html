@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+JS</title>
+    <script>
+        window.addEventListener('DOMContentLoaded', function(){
+            코드;
+        });
+
+        // 제이쿼리
+        $(document).ready(function(){
+            코드;
+        });
+
+        // 또는
+
+        $(function(){
+            코드;
+        });
+    </script>
+</head>
+
+<body>
+    <h1>함수</h1>
+    <p>눌러 보세요~</p>
+
+    <script>
+        var txt = document.querySelector('p');
+        console.log(txt);
+
+        txt.addEventListener('click', fn);
+
+        // 익명 함수은 선언 후 호출
+        var fn = function () {
+            txt.innerHTML = '4<br>';
+            txt.innerHTML += '5<br>';
+            txt.innerHTML += '6<br>';
+        }
+
+        // 선언적 함수은 선언 전/후 호출 가능!
+        function fn() {
+            txt.innerHTML = '1<br>';
+            txt.innerHTML += '2<br>';
+            txt.innerHTML += '3<br>';
+        }
+    </script>
+</body>
+
+</html>

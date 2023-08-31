@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEGA 캐로셀 - bxSlide</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.css">
+    <style>
+        body {
+            margin: 0;
+        }
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+        .slidewrap {
+            /* 이미지 하나가 348px */
+            width: 1044px;
+            margin: 0 auto;
+        }
+        .bx-wrapper {
+            background: transparent;
+            box-shadow: none;
+            border: none;
+            margin-bottom: 0;
+            overflow: hidden;
+        }
+
+        .bx-wrapper .bx-pager {
+            bottom: 20px;
+        }
+
+        .bx-wrapper .bx-pager.bx-default-pager a:hover,
+        .bx-wrapper .bx-pager.bx-default-pager a.active,
+        .bx-wrapper .bx-pager.bx-default-pager a:focus {
+            background: black;
+        }
+
+        .bx-wrapper .bx-pager.bx-default-pager a {
+            background: white;
+            width: 5px;
+            height: 5px;
+            margin: 0 5px;
+            border-radius: 5px;
+        }
+
+        /* 
+            미디어(<img>, <video>)의 크기
+            object-fit: cover, contain, ...
+            object-position: x위치 y위치;
+            
+            배경 이미지:
+            background-size: cover, contain;
+            background-position: x위치 y위치
+        */
+        .bx-wrapper .bx-prev {
+            left: 10px;
+            background: url(images/left.svg) no-repeat 0 0;
+        }
+
+        .bx-wrapper .bx-next {
+            right: 10px;
+            background: url(images/right.svg) no-repeat 0 0;
+        }
+        div {text-align: center;}
+    </style>
+</head>
+
+<body>
+    <div id="section">
+        <div class="slidewrap">
+            <div class="slider">
+                <div>
+                    <img src="images/762676C01.png" alt="이미지1">
+                    <p>투톤 셀레셀 트리플 댕글 참</p>
+                    <p>&#8361;138,000</p>
+                    <a href="#">제품보기</a>
+                </div>
+                <div>
+                    <img src="images/791691C02.png" alt="이미지2">
+                </div>
+                <div>
+                    <img src="images/792680C01.png" alt="이미지3">
+                </div>
+                <div>
+                    <img src="images/792681C01.png" alt="이미지4">
+                </div>
+                <div>
+                    <img src="images/792687C01.png" alt="이미지5">
+                </div>
+                <div>
+                    <img src="images/792694C01.png" alt="이미지6">
+                </div>
+                <div>
+                    <img src="images/792695C01.png" alt="이미지7">
+                </div>
+                <div>
+                    <img src="images/792698C01.png" alt="이미지8">
+                </div>
+                <div>
+                    <img src="images/792703C01.png" alt="이미지9">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 제이쿼리? 자바스크립트 라이브러리 언어이다. -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- bx슬라이더 CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"></script>
+    <script>
+        $('.slider').bxSlider({
+            slideWidth: 348,
+            minSlides: 3,
+            maxSlides: 3,
+            moveSlides: 3,
+        });
+    </script>
+</body>
+
+</html>
