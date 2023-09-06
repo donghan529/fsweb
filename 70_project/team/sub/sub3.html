@@ -7,6 +7,49 @@
     <title>써브웨이</title>
     <link rel="stylesheet" href="../css/sub3.css">
     <link rel="icon" href="../images/sub3/subway_favicon.ico">
+    <script>
+        function mover1() {
+            var m;
+            m = document.getElementsByClassName('outer1')
+            m[0].style.background = ('#fff');
+            color =('#000')
+        }
+        function mout1() {
+            var m;
+            m = document.getElementsByClassName('outer2')
+            m[0].style.backgroundImage = "url('../images/sub3/bg_store.jpg')";
+        }
+        function mover2() {
+            var m;
+            m = document.getElementsByClassName('outer2')
+            m[0].style.background = ('#fff');
+        }
+        function mout2() {
+            var m;
+            m = document.getElementsByClassName('outer1')
+            m[0].style.backgroundImage = "url('../images/sub3/bg_nation.jpg')";
+        }
+        /* 애니메이션 페이드인 */
+        function animateElement(elementId, slideInClass, slideOutClass) {
+            const element = document.getElementById(elementId); // id로 해당 요소 찾기
+            const rect = element.getBoundingClientRect(); // 요소 위치 구하기
+            // 요소가 화면 안쪽으로 들어왔을 경우 isVisible로 인식
+            const isVisible = rect.top <= window.innerHeight && rect.bottom>= 0;
+            if (isVisible) {
+            element.classList.add(slideInClass);
+            element.classList.add("show");
+            element.classList.remove(slideOutClass);
+            } else {
+            element.classList.add(slideOutClass);
+            element.classList.add("hide");
+            element.classList.remove(slideInClass);
+            }
+        }
+        window.addEventListener("scroll", function () {
+            animateElement("element-1", "slide-in-right", "slide-out-right");
+            animateElement("element-2", "slide-in-left", "slide-out-left");
+        });
+    </script>
 </head>
 
 <body>
@@ -83,12 +126,12 @@
         <p>Quick Service Restaurant(QSR) 부분 No.1 프랜차이즈입니다.</p>
         <div class="hover">
             <div class="nation">
-                <div class="outer1">
+                <div class="outer1" onmouseover="mover2()" onmouseout="mout2()">
                     <div class="inner1">
                         <p><span>전세계</span></p><strong>104</strong>개국
                     </div>
                 </div>
-                <div class="outer2">
+                <div class="outer2" onmouseover="mover1()" onmouseout="mout1()">
                     <div class="inner2">
                         <p><span>매장수</span></p><strong>37,525</strong>개
                     </div>
@@ -157,7 +200,7 @@
         <h3>가맹점 개설 절차</h3>
         <p>높은 수익성과 탁월한 안정성이 전세계 104개국, 37,525여개 매장으로 검증된 글로벌 No.1 프랜차이즈 써브웨이</p>
         <p>체계화된 성공 노하우와 함께 새로운 비즈니스의 시작을 준비하십시오.</p>
-        <div class="step_wrap">
+        <div div id="element-1" class="step_wrap hide">
             <ol>
                 <li>
                     <div class="step not">
@@ -217,7 +260,7 @@
             <div>본사는 우수한 점주님들의 참여와 도전으로 성장합니다. 써브웨이는 끊임 없는 노력으로 점주님들의 그 도전을 돕겠습니다.</div>
         </div>
         <h3>예상 투자비용</h3>
-        <div class="table_wrap">
+        <div id="element-2" class="table_wrap hide">
             <div>
                 <p>VAT 별도, 25평 기준</p>
             </div>
