@@ -108,12 +108,10 @@ p {text-align: center;}
 }
 
 .outer1:hover {
-    background: #fff;
     color: #fff;
 }
 
 .outer2:hover {
-    background: url(../images/sub3/bg_store.jpg) no-repeat;
     color: #fff;
 }
 
