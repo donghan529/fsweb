@@ -1,0 +1,353 @@
+@charset "UTF-8";
+@import url(typo.css);
+/* @import url(hp.css); */
+@import url(hf.css);
+
+/* 로그인 섹션 */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.wrap {
+    background-color: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* 로그인 섹션 */
+
+/* 로그인 위 박스 */
+/* each */
+.login_form {
+    margin-top: 10px;
+}
+
+#login_sec {
+    background-color: #ddd;
+}
+
+/* 로그인 가장 큰 박스 */
+/* each */
+.wrap_login {
+    padding-top: 100px;
+    height: 815px;
+}
+
+/* each */
+.panel_box {
+    width: 70%;
+    height: 550px;
+    /* 찾기용 */;
+    border-radius: 15px;
+    text-align: center;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+
+.panel_box h3 {
+    font-size: 5.0rem;
+    letter-spacing: 2px;
+}
+
+.panel_box span {
+    font-size: 1.8rem;
+    line-height: 160%;
+}
+
+/* 로그인 폼 항목 */
+/* each */
+#user_id {
+    width: 70%;
+    height: 30px;
+    margin-top: 20px;
+}
+
+/* each */
+#user_password {
+    width: 70%;
+    height: 30px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+/* each */
+.login_button {
+    font-size: 2.8rem;
+    font-weight: bold;
+    letter-spacing: 4px;
+    width: 60%;
+    height: 50px;
+    margin-top: 20px;
+    color: #fff;
+    background-color: #009223;
+}
+
+.boxid {
+    font-size: 10px;
+    text-align: right;
+}
+
+.boxps {
+    font-size: 10px;
+    text-align: right;
+}
+
+/* 이미지슬라이드 */
+
+.login_image_slide {
+    outline: 2px solid #ccc;
+    border-radius: 15px;
+    /* width: 550px; */
+    width: 100%;
+    height: 263px;
+    margin-top: 20px;
+    background-color: #fff;
+}
+
+.login_image_slide_ul>li {
+    position: absolute;
+    height: 2500x;
+    top: 550px;
+}
+
+.login_image_slide_ul img {
+    /* width: 700px; */
+    width: 120%;
+    translate: -50px;
+    height: 262px;
+    border-radius: 15px;
+    
+    
+}
+
+.login_image_slide {
+    /* width: 550px; */
+    width: 100%;
+    height: 262px;
+    overflow: hidden;
+}
+
+.login_image_slide_ul {
+    position: relative;
+    /* overflow: hidden; */
+}
+
+.login_image_slide_ul li {
+    /* width: 550px; */
+    width: 100%;
+    height: 300px;
+    /* overflow: hidden; */
+}
+
+.login_image_slide_ul li:nth-last-of-type(1) {
+    /* background-image: url(assets/images/sandwich_bf01_jpg); */
+    animation-name: slide1;
+    animation-duration: 20s;
+    animation-timing-function: ease;
+    animation-delay: .1s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+}
+
+.login_image_slide_ul li:nth-last-of-type(2) {
+    animation-name: slide2;
+    animation-duration: 20s;
+    animation-timing-function: ease;
+    animation-delay: .1s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+}
+
+.login_image_slide_ul li:nth-last-of-type(3) {
+    animation-name: slide3;
+    animation-duration: 20s;
+    animation-timing-function: ease;
+    animation-delay: .1s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+}
+
+.login_image_slide_ul li:nth-last-of-type(4) {
+    left: 0;
+    top: 0;
+}
+
+@keyframes slide1 {
+ 0% {
+    top: 0px;
+    
+ }
+
+ 15% {
+    top: 0px;
+    
+ }
+
+ 33% {
+    top: 300px;
+   
+ }
+
+ 100% {
+    top: 300px;
+   
+ }
+}
+
+@keyframes slide2 {
+    0% {
+       top: 0px;
+       
+    }
+   
+    33% {
+       top: 0px;
+      
+    }
+
+    48% {
+        top: 0px;
+       
+     }
+
+    66% {
+        top: 300px;
+       
+     }
+   
+    100% {
+       top: 300px;
+      
+    }
+   }
+
+   @keyframes slide3 {
+    0% {
+       top: 0px;
+       
+    }
+
+    77% {
+        top: 0px;
+       
+     }
+   
+    100% {
+       top: 300px;
+      
+    }
+   }
+
+/* //. 이미지 슬라이드 */
+
+/* 로그인 박스 호버효과 */
+.login_form span:hover {
+    font-weight: bold;
+}
+
+.checkbox_bold:hover ~ .checkbox_bold2 {
+    font-weight: bold;
+}
+
+/* 박스 위쪽 기둥 */
+/* each */
+.boxbox {
+    position: absolute;
+    background-color: #009223; /* 찾기용 */
+    /* width: 550px; */
+    width: 70%;
+    height: 30px;
+    z-index: 20;
+    border-radius: 15px 15px 0 0;
+}
+
+/* mobile */
+@media (max-width:767px) {
+
+.panel_box {
+        width: 95%;
+    }
+
+.boxbox {
+    width: 95%;
+}
+
+span > a {
+    font-size: 1.6rem;
+}
+
+.wrap_login {
+    padding-top: 80px;
+}
+}
+
+/* Tablet */
+
+@media (min-width:768px) and (max-width:992px) {
+
+    .wrap_login {
+        padding-top: 85px;
+    }
+
+}
+
+/* PC */
+@media (min-width:992px) {
+
+/* 로그인 가장 큰 박스 */
+.wrap_login {
+    padding-top: 125px;
+    height: 870px;
+}
+
+/* 로그인 위 박스 */
+/* each */
+.login_form {
+    margin-top: 20px;
+}
+
+/* each */
+.panel_box {
+        width: 550px;
+        height: 550px;
+        /* 찾기용 */;
+        border-radius: 15px;
+        text-align: center;
+        margin: 0 auto;
+        background-color: #fff;
+    }
+
+/* each */
+#user_id {
+    width: 320px;
+}
+
+/* each */
+#user_password {
+    width: 320px;
+}
+
+.login_button {
+    font-size: 2.8rem;
+    font-weight: bold;
+    letter-spacing: 4px;
+    width: 325px;
+    height: 50px;
+    margin-top: 20px;
+    color: #fff;
+    background-color: #009223;
+}
+
+/* each */
+.boxbox {
+    width: 550px;
+}
+
+}

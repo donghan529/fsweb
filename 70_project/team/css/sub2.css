@@ -1,0 +1,220 @@
+
+@charset "UTF-8";
+@import url(typo.css);
+@import url(hf.css);
+
+
+/* 리셋 */
+*{box-sizing: border-box;} 
+body,h1,h2,h3,p,ul{margin: 0; padding: 0;}
+body{background-color: #fff;
+    font-size: 16px;
+    color: #666666; }
+
+ul li{padding: 0; list-style:none;}
+a{text-decoration: none; cursor: pointer;}
+
+
+/* 공통 */
+body{background-color: #F2F2F2;}
+
+
+/* 해더 */
+.wrap{background-color:#fff;}
+
+ 
+
+/* 제품비주얼 (케로셀) */
+section.sec1{
+    height: 600px;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color:#F2F2F2;
+   }
+   
+.visual{
+    position: relative;
+    top: 80px;
+    width: 100vw;
+    height: 300px;
+    background-color: #84C440;
+   }
+        
+/* 인디케이터 버튼*/
+.control { 
+    position: absolute;
+    top: 250px;
+    width: 100%;
+    text-align: center;       
+    }
+
+.control a {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: #f6f5f5;                       
+    font-size: 14px;
+    border-radius: 14px;
+    margin: 0 4px
+    }
+
+
+/* 케로셀 버튼 */
+button{ 
+    border: 0;
+    background-color: transparent;
+    color:#FFF;
+    font-size: 35px;
+    cursor: pointer; }
+
+.prev{position: absolute; top:130px; left: 300px;}    
+.next{position: absolute; top:130px; right: 300px;}    
+
+.prev:hover,
+.next:hover{
+    color:#FFC20D;
+    transition: 0.2s ease; }
+
+
+
+/* 케로셀 안의 텍스트  */
+.visual h1:nth-of-type(1){
+    position:absolute; 
+    top: 250px;
+    left: 160px; 
+    color:#FFF}
+
+.visual h1:nth-of-type(2){
+    position:absolute; 
+    top: 250px;
+    left:930px; 
+    color:#FFF;
+    width: 450px;
+    }
+
+.visual h1:nth-of-type(3){
+    position:absolute; 
+    width: 430px;
+    top: 250px;
+    left:1695px; 
+    color:#fff;
+    }
+
+
+/* 케로셀이미지 */
+.carousel-wrapper{
+    position:relative; 
+    top: -115px;
+    margin: 0 auto;
+    width: 760px;
+    height: 300px;
+    overflow: hidden;
+}
+
+.Carousel{display: flex;  transition:all 1.8s;}
+
+
+.Carousel img {
+    flex: 0 0 auto;
+    width: 760px; height: 300px;
+    padding: 0 140px;
+    transition:all 2.8s;
+    }
+.Carousel img:hover{transform: scale(1.2);}
+
+/* 케로셀 배경이미지 색상  */
+/* .Carousel img:nth-of-type(1){background-color: #853232;}
+.Carousel img:nth-of-type(2){background-color: #FBF6A4;}
+.Carousel img:nth-of-type(3){background-color: #A0D6B6;} */
+
+
+/* 상단 탭메뉴 */
+.tab-menu{
+    width: 1170px; height: 100px; 
+    margin: -40px auto;
+    margin-bottom: 20px;
+    background-color: #F2F2F2;}
+
+
+.tab-menu ul{ 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    line-height: 80px;
+    background: url(../images/sub2/bg_tabbox.png);}
+
+.tab-menu ul li{ margin: 0 23px;}
+.tab-menu ul li {
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #888888;}
+
+.tab-menu li:hover {color: #FFC20D; transition:all 0.6s;}
+
+
+/* 탭메뉴 가리기 */
+.sec input{display: none;}
+.sec2 input:checked + div{display: block; }
+.sec2 > div{display: none;}
+
+
+
+/* 제품이미지 정렬(.sec2) */
+.sec2{
+    display: flex; 
+    direction: row;
+    justify-content: center;
+    background-color: #F2F2F2;}
+
+
+/* 목록이미지 W/H */
+.SAND{width: 1170px; height: 1900px;}
+.RAP{width: 1170px; margin-bottom: 50px;}
+.SALAD{width: 1170px; margin-bottom: 50px;}
+.MORNING{width: 1170px;  margin-bottom: 50px;}
+.SMILE {width: 1170px; margin-bottom: 50px;}
+.GROUP {width: 1170px; margin-bottom: 50px;}
+
+/* 제품이미지 정렬 */
+.ITEM ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    align-items: normal;}
+
+ /* li크기 */
+.ITEM ul li{
+    width: 370px;
+    height: 330px; 
+    margin-bottom:40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;}
+
+/* 제품목록글씨 */
+.ITEM_LIST span:nth-of-type(1){
+    color:black; 
+    font-size: 20px;
+    font-weight: 800;}
+    
+.ITEM_LIST span:nth-of-type(3){
+    color:#FFC20D; 
+    font-size: 18px;
+    font-weight: 600;}
+
+/* 상품이미지 hover */
+.pd-img{perspective: 1000px;}
+.pd-img img{
+    width: 270px; 
+    height: 189px;
+    transition:all 2.8s;} 
+.pd-img:hover img{transform: scale(1.4);}
+
+
+
