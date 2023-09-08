@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+JS</title>
+    <style>
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .photo {
+            width: 300px;
+            height: 300px;
+            background: #000;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>이미지 갤러리</h1>
+    <div id="gallery">
+        <div class="photo">
+            <img src="/51_css/assets/images/Italy1.jpg" alt="이탈리아1">
+        </div>
+        <!-- 인디케이터 -->
+        <div class="ctls">
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>4</button>
+            <button>5</button>
+        </div>
+    </div>
+    <script>
+        const btn = document.querySelectorAll('button');
+        const photo = document.querySelector('img');
+
+        for(let i=0; i<btn.length; i++) {
+            btn[i].onclick = function () {
+                photo.src = `/51_css/assets/images/Italy${i+1}.jpg`;
+                // photo.src = "/51_css/assets/images/Italy" + i + ".jpg";
+            };
+        }
+
+        /* btn[0].onclick = function () {
+            photo.src = "/51_css/assets/images/Italy1.jpg";
+        };
+        btn[1].onclick = function () {
+            photo.src = "/51_css/assets/images/Italy2.jpg";
+        };
+        btn[2].onclick = function () {
+            photo.src = "/51_css/assets/images/Italy3.jpg";
+        }; */
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+JS</title>
+    <style>
+        img {width: 300px;}
+    </style>
+</head>
+
+<body>
+    <h1>이미지 갤러리</h1>
+    <div id="galleryZone">
+        <p>
+            <button onclick="gallery(0)">이전</button>
+            <button onclick="gallery(1)">다음</button>
+        </p>
+        <p><img src="/51_css/assets/images/Italy1.jpg" alt="이탈리아1" id="photo"></p>
+    </div>
+    <script>
+        const btn = document.querySelectorAll('button');
+        const img = document.querySelector('img');
+
+        // for (let i = 0; i < btn.length; i++) {
+        //     btn[i].onclick = function () {
+        //         console.log(this.innerText);
+
+        //         switch (i) {
+        //             case 1:
+        //                 img.src = '../assets/images/italy1.jpg';
+        //                 img.alt = '이탈리아1';
+        //                 break;
+        //             case 2:
+        //                 img.src = '../assets/images/italy2.jpg';
+        //                 img.alt = '이탈리아2';
+        //                 break;
+        //             default:
+        //                 img.src = '../assets/images/italy3.jpg';
+        //                 img.alt = '이탈리아3';
+        //         }
+
+        //         console.log(img);/*  */
+        //     };
+        // }
+        /* for(let i=0; i<btn.length; i++) {
+            btn[i].onclick = function(){
+                console.log(this.innerText);
+
+                if (i === 0) {
+                    img.src = '/assets/images/italy2.jpg';
+                    img.alt = '이탈리아1';
+                } else if (i === 1) {
+                    img.src = '/assets/images/italy3.jpg';
+                    img.alt = '이탈리아2';
+                } else {
+                    img.src = '/assets/images/italy4.jpg';
+                    img.alt = '이탈리아3';
+                }
+
+                console.log(img);
+            };
+        } */
+
+        /* for(let i=0; i<btn.length; i++) {
+            btn[i].onclick = function(){
+                console.log(this.innerText);
+
+                if (i === 0) {
+                    img.src = '/assets/images/italy2.jpg';
+                } else {
+                    img.src = '/assets/images/italy3.jpg';
+                }
+            };
+        } */
+
+        /* const btn = document.querySelectorAll('button');
+        
+        for(let i=0; i<btn.length; i++) {
+            btn[i].onclick = function(){
+                console.log(this.innerText);
+
+                this.innerText === 'prev' ? document.body.style.background = 'yellow' : document.body.style.background = 'lightblue';
+            };
+        } */
+
+
+    </script>
+</body>
+
+</html>

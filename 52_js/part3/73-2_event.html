@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="box1 box">박스1</div>
+    <div class="box2 box">박스2</div>
+    <div class="box3 box">박스3</div>
+    <p></p>
+
+    <script>
+        const txt = document.querySelector('p');
+
+        const boxArr = document.querySelectorAll(".box");
+        // console.log(boxArr[1]);
+        // length 속성 ~ 배열[1,2,3], 컬렉션(NodeList), 문자열(abc)의 총 개수
+        // for(let 변수 of 배열|컬렉션|문자열) {코드}
+        // for (let i of boxArr) {코드}
+        const cnt = boxArr.length
+        for (let i = 0; i < cnt; i++) {
+            boxArr[i].addEventListener("click", (e) => {
+                // this, target, currentTarget
+                tar = e.target;
+                // e.target, currentTarget는 클릭한 대상
+                // boxArr[0] -> red
+                // boxArr[1] -> blue
+                // boxArr[2] -> orange
+
+                if (tar === boxArr[0]) {
+                    txt.innerText = `box1 click`;
+                } else if (tar === boxArr[1]) {
+                    txt.innerText = `box2 click`;
+                } else {
+                    txt.innerText = "box3 click";
+                }
+                // console.log(tar);
+            })
+        }
+    </script>
+</body>
+
+</html>
