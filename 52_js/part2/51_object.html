@@ -10,8 +10,28 @@
 
 <body>
     <h1>객체</h1>
+    <div></div>
     <script>
         /* 
+            객체는 속성과 메서드가 있다.
+            속성의 값이 함수일 경우가 메서드 이다.
+
+            객체
+            const 변수 = {
+                속성:값, 
+                속성:function(){}, 
+                ...
+            }
+
+            배열
+            const 변수 = [
+                값, 
+                값, 
+                ...
+            ]
+
+            변수[0];
+
             현실 세계
             TV -> 객체
             켜다, 끄다, 볼륨을 높이다, 볼륨을 낮추다 -> 메서드
@@ -34,11 +54,35 @@
             3. 문서 객체 모델(DOM, Document Object Model)
                 - HTML 문서 구조
         */
+        
+        const box = document.querySelector('div');
 
-        // 내장 객체 생성
-        // 객체 생성 시 new 키워드와 생성함수를 사용한다.
-        // 참조변수(인스턴스명) = new 생성함수()
+        // box.innerHTML = `
+        //     ${photo}<br>
+        //     ${tit1}<br>
+        //     ${tit2}<br>
+        //     ${btn}<br>
+        // `;
 
+        const obj0 = {
+            photo: `<img src="/51_css/assets/images/코카콜라.png" alt="코카콜라">`,
+            tit1: '메인 타이틀입니다.',
+            tit2: '서브 타이틀입니다.',
+            btn: `<button>자세히 보기</button>`
+        };
+        
+        const obj1 = {
+            'photo image': `<img src="/51_css/assets/images/코카콜라.png" alt="코카콜라">`,
+            'tit1': '메인 타이틀2입니다.',
+            'tit2': '서브 타이틀2입니다.',
+            'btn': `<button>자세히 보기2</button>`
+        };
+
+        // 객체.속성
+        box.innerHTML = obj0.photo + '<br>';
+        // 객체['속성']
+        box.innerHTML += obj0['photo'] + '<br>';
+        box.innerHTML += obj1['photo image'] + '<br>';
 
     </script>
 </body>
