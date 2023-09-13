@@ -138,25 +138,13 @@
         const indiBtn = document.querySelectorAll('.indi li');
         let cnt = 0;
 
-        for (let i = 0; i<slideCount; i++)
-        indiBtn[i].onclick = function() {
-            listItem[i].style.left = '100%';
-            listItem[i].style.transition = '.3s';
-            moveSlide(i);
-        };
-        indiBtn[1].onclick = function() {
-            listItem[1].style.left = '100%';
-            listItem[1].style.transition = '.3s';
-            moveSlide(1);
+        for (let i = 0; i < slideCount; i++) {
+            indiBtn[i].onclick = function () {
+                listItem[i].style.left = '100%';
+                listItem[i].style.transition = '.3s';
+                moveSlide(i);
+            };
         }
-
-        nextBtn.onclick = function () {
-            cnt++;
-            if (cnt === slideCount) cnt = 0;
-            listItem[cnt].style.left = '100%';
-            listItem[cnt].style.transition = '.3s';
-            moveSlide(cnt);
-        };
 
         function moveSlide(i) {
             console.log(i);
