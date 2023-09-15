@@ -8,25 +8,84 @@
     <title>HTML+CSS+JS</title>
     <style>
         div {
+            box-sizing: border-box;
             width: 200px;
             height: 400px;
             padding: 20px;
             border: 5px solid blue;
             margin: 50px;
             background: blue;
+            overflow-y: scroll;
+        }
+
+        p {
+            font-size: 2rem;
         }
     </style>
 </head>
 
 <body>
-    <div></div>
-
+    <div>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius, exercitationem? Voluptatum nisi odit
+        voluptates? Aut itaque non optio architecto quas amet laborum deserunt, reiciendis error dolor cumque saepe in
+        magni, quisquam quia explicabo dolore placeat et accusamus, nemo iste suscipit magnam! Est officiis rerum quidem
+        quas. Odio, aliquam ullam? Inventore laborum perferendis cum culpa nisi praesentium, repellat dicta ipsum maxime
+        dolorem aspernatur. Alias, nam. Quod iusto beatae iure aut temporibus voluptatem ducimus, dolorum suscipit quis
+        laborum, reiciendis ex optio, eos id et inventore ipsa dignissimos. Hic unde dolorem dignissimos asperiores,
+        quos aperiam natus, esse vitae suscipit sequi beatae ab eos expedita dolor alias maxime aliquam nostrum,
+        similique iste fugiat incidunt voluptate rerum. Sed, assumenda. Explicabo delectus culpa ut eligendi animi amet
+        recusandae natus facere aliquid, optio a. Sint ea corrupti et architecto saepe itaque facere, alias eligendi
+        eaque commodi voluptas obcaecati, sapiente deserunt totam nulla nostrum laborum incidunt in natus iure sunt
+        voluptatibus! Tempore, porro sequi omnis sit alias molestiae blanditiis, doloremque voluptatem ex provident
+        itaque quae, at voluptates saepe exercitationem nobis corporis suscipit? Tempora repellendus eius sint
+        consequuntur, facilis est tempore, quod molestiae odit architecto dolor ipsum. Ab molestiae nihil aspernatur
+        corrupti. Quas aliquam veniam, voluptates, consectetur autem molestiae voluptatibus perspiciatis culpa nisi hic
+        eaque vitae facilis odio, quasi deleniti in sit enim ab libero minus qui non eligendi pariatur voluptatem! Est,
+        voluptas explicabo ratione nostrum a distinctio velit ullam ab perspiciatis! Vero accusantium laborum odio
+        eveniet perspiciatis eos earum possimus unde rerum est placeat sunt officiis vitae a, consectetur voluptatem
+        quasi rem ipsum, modi, alias enim magni. Itaque, cum debitis. Vero illum nulla officiis libero nesciunt debitis,
+        odit vitae accusamus. Doloribus odio aspernatur esse excepturi ut, iure ipsam distinctio a blanditiis omnis
+        culpa. Aut error laboriosam porro iure similique, labore omnis eum sint sapiente eligendi, aspernatur
+        dignissimos neque nemo, quisquam veniam! Cum asperiores, minima sapiente ducimus culpa debitis natus facere vel?
+        Molestiae autem impedit ratione doloremque tenetur distinctio, eveniet at eos, error doloribus iusto voluptatem
+        dignissimos harum. Sed ullam deleniti quam nisi fuga repellat recusandae vel voluptatum reiciendis asperiores,
+        ratione, quo dolores a excepturi illum amet iste quidem rem facilis! Quae iure eligendi consectetur vel rerum,
+        iste in aliquid, magni dolore magnam, nihil consequuntur fugiat sapiente nobis quia cupiditate quaerat rem unde
+        quibusdam asperiores. Alias doloribus rem tenetur expedita quos ipsum quam deserunt neque est, earum sint unde
+        iste illum tempora fugiat, enim quia cupiditate quas quis. Illo natus, asperiores odit eligendi omnis dolorum
+        voluptate aliquam excepturi doloribus laborum veniam tenetur minus, sunt delectus. A, quas quibusdam laudantium,
+        magni ducimus eaque officiis iste, laborum doloribus aspernatur laboriosam vitae aliquid perferendis. Fugiat
+        eligendi similique, libero ipsum ipsam, necessitatibus quis suscipit sequi consectetur laudantium veniam
+        doloremque atque quo ad, qui consequatur itaque porro. Harum beatae, natus consequatur delectus culpa quisquam!
+        Tempore nulla ipsa, similique dignissimos atque numquam error quisquam incidunt, distinctio natus deleniti omnis
+        reiciendis nisi corporis tempora, veritatis quia illum doloremque sed eius ratione laborum quis vero est!
+        Dolorem modi corporis vitae iste aspernatur vero ea sequi doloribus quasi?</div>
+    <p>여기에 출력~</p>
     <script>
         /* 
-            요소.offsetWidth ~ 패딩, 테두리 및 스크롤 막대를 포함하여 요소의 볼 수 있는 너비(픽셀 단위)를 반환
-            요소.offsetHeight ~ 패딩, 테두리 및 스크롤 막대를 포함하여 요소의 볼 수 있는 높이(픽셀 단위)를 반환
+            요소의 가로/세로 크기
+            요소.offsetWidth ~ 테두리+패딩+스크롤바 포함 너비(읽기 전용)
+            요소.offsetHeight ~ 테두리+패딩+스크롤바 포함 높이(읽기 전용)
+            요소.clientWidth ~ 패딩 포함 너비(읽기 전용)
+            요소.clientHeight ~ 패딩 포함 높이(읽기 전용)
+
+        가져오기
+            요소.offsetHeight
         */
 
+        const box = document.querySelector('div');
+        const txt = document.querySelector('p');
+        const btn = document.querySelector('button');
+
+        // 가져오기
+        let oh = box.offsetHeight;
+
+        // 출력
+        txt.innerHTML = `
+            box.offsetWidth = ${box.offsetWidth} <br>
+            box.offsetHeight = ${oh} <br>
+            box.clientWidth = ${box.clientWidth} <br>
+            box.clientHeight = ${box.clientHeight}
+        `;
     </script>
 </body>
 

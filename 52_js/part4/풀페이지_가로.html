@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fullPage - 가로</title>
+    <style>
+        /* reset.css */
+        html {
+            scroll-behavior: smooth;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* fullPage layout */
+        #wrap {
+            display: flex;
+            /* 세로 스크롤바 숨김 */
+            height: 100vh;
+            overflow-y: hidden;
+        }
+        .sec {
+            flex-shrink: 0;
+            width: 100vw;
+            height: 100vh;
+        }
+        #sec1 {background: darkblue;}
+        #sec2 {background: darkcyan;}
+        #sec3 {background: darkgoldenrod;}
+        #sec4 {background: darkorchid;}
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <section id="sec1" class="sec">
+            <h2>섹션1</h2>
+        </section>
+        <section id="sec2" class="sec">
+            <h2>섹션2</h2>
+        </section>
+        <section id="sec3" class="sec">
+            <h2>섹션3</h2>
+        </section>
+        <section id="sec4" class="sec">
+            <h2>섹션4</h2>
+        </section>
+    </div>
+
+    <script>
+        /* 
+            스크롤바를 아래로 내리면 
+            아래 박스가 위로 올라온다.
+        */
+
+        // 변수 선언
+        // const 변수1=값, 변수2=값, ...;
+        const wrap = document.querySelector('#wrap');
+        const sec = document.querySelectorAll('.sec');
+        let wrapWidth;
+
+        window.onresize = function() {
+            wrapWidth  = wrap.offsetWidth;
+        };
+
+        wrap.onwheel = (e) => {
+            // 기본 이벤트를 제거
+            e.preventDefault();
+            if (e.deltaY > 0) {
+                // 마우스휠 내림
+                wrap.scrollLeft += wrap.offsetWidth;
+            } else {
+                // 마우스휠 올림
+                wrap.scrollLeft -= wrap.offsetWidth;
+            }
+        };
+        console.log(wrapWidth);
+        </script>
+</body>
+
+</html>

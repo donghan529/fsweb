@@ -9,8 +9,9 @@
     <style>
         div {
             position: absolute;
-            left:0;
-            top:300px;
+            left: 0;
+            top: 300px;
+            left: 500px;
             width: 200px;
             height: 200px;
             background: blue;
@@ -20,12 +21,28 @@
 
 <body>
     <button>버튼</button><span></span>
+    <p>여기에 출력~</p>
     <div></div>
 
     <script>
         /* 
-            요소.offsetTop ~ 창 끝에서 요소의 y축 위치 반환
+            요소.offsetTop ~ 창 끝에서 요소의 y축 위치 반환(읽기 전용)
+            요소.offsetleft ~ 창 끝에서 요소의 x축 위치 반환(읽기 전용)
+
+            가져오기
+                요소.offsetTop
         */
+
+        // 요소 선택
+        const box = document.querySelector('div');
+        const txt = document.querySelector('p');
+
+        // 출력
+        txt.innerText = `
+            box.offsetTop = ${box.offsetTop}
+            box.offsetLeft = ${box.offsetLeft}
+        `;
+
 
     </script>
 </body>

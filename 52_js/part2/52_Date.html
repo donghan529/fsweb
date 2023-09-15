@@ -10,11 +10,20 @@
 
 <body>
     <h1>날짜 객체</h1>
+    <p>여기에 출력~</p>
     <script>
 
         /* 
             참조변수 = new Date()
             참조변수 = new Date(연,월,일)
+
+            getter(게터): 가져오기
+            변수 = 객체.속성;
+            변수 = 객체.메서드();
+
+            setter(세터): 지정하기
+            객체.속성;
+            객체.메서드(값);
 
             날짜 정보를 가져올 때(get)
             getFullYear(): 년
@@ -39,7 +48,28 @@
             setMilliseconds()
             setTime()
         */
-
+        
+        const pTag = document.querySelector('p');
+        
+        
+        
+        setInterval(clock, 1000);
+        
+        function clock() {
+            const D = new Date();
+            pTag.innerText = D;    
+            pTag.innerHTML += '<br>' + D.getFullYear();    
+            pTag.innerHTML += '<br>' + D.getMonth();    
+            pTag.innerHTML += '<br>' + D.getDate();    
+            pTag.innerHTML += '<br>' + D.getDay();    
+            pTag.innerHTML += '<br>' + D.getHours();    
+            pTag.innerHTML += '<br>' + D.getMinutes();    
+            pTag.innerHTML += '<br>' + D.getSeconds();    
+            pTag.innerHTML += '<br>' + D.getMilliseconds();    
+            pTag.innerHTML += '<br>' + D.getTime();    
+            pTag.innerHTML += '<br>' + D.toGMTString();    
+            pTag.innerHTML += '<br>' + D.toLocaleString();    
+        }
     </script>
 </body>
 
