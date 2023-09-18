@@ -1,13 +1,13 @@
 @charset "utf-8";
 /* reset.css */
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&display=swap');
+@import url("https://cdn.jsdelivr.net/gh/moonspam/NanumBarunGothic@latest/nanumbarungothicsubset.css");
 
 html {
     font-size: 10px;
 }
 
 body {
-    font: 1.5rem/1.8 'IBM Plex Sans KR', sans-serif;
+    font: 1.5rem/1.8 'NanumBarunGothic', sans-serif;
 }
 
 #sec3,
@@ -17,6 +17,7 @@ body {
 
 #sec3 .tit1 {
     line-height: 1;
+    font-weight: 900;
 }
 
 #sec3 .tit1 span:nth-of-type(1) {
@@ -31,6 +32,8 @@ body {
 
 #sec3 .tit1 span:nth-of-type(3) {
     font-size: 4.4rem;
+    letter-spacing: 5px;
+
 }
 
 #sec3 .tit2 p:nth-of-type(1) {
