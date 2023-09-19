@@ -1,6 +1,7 @@
         /*
             location.href ='url:';
-                http://id.dothome.co.kr/index.html -> 데스크탑
+                http://id.dothome.co.kr/index.html -> userAgent
+                http://id.dothome.co.kr/main.html -> 데스크탑
                 http://id.dothome.co.kr/m/index.html -> 모바일
 
             String(문자열) 객체
