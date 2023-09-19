@@ -3,6 +3,9 @@
 @import url(typo.css);
 
 /* fullPage layout */
+body {
+    overflow-y: hidden;
+}
 .sec {
     height: 100vh;
 }
