@@ -13,7 +13,7 @@ html {
     scroll-behavior: smooth;
 }
 
-body,h1,h2,h3,h4,ul,ol,p {
+body,h1,h2,h3,h4,ul,ol,p,figure {
     margin: 0;
 }
 
@@ -27,6 +27,11 @@ img {
     height: 100%;
     object-fit: cover;
     vertical-align: top;
+}
+
+video {
+    width: 100%;
+    object-fit: cover;
 }
 
 a {

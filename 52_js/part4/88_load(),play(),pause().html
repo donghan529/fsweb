@@ -10,9 +10,11 @@
         .box {
             width: 400px;
         }
+
         .box video {
             width: 100%;
         }
+
         .btnSet li {
             float: left;
             margin: 0 20px;
@@ -25,7 +27,7 @@
 <body>
     <div class="box">
         <video>
-            <source src="../../assets/video/uber_main_220126.mp4" type="video/mp4">
+            <source src="../assets/video/mov_bbb.mp4" type="video/mp4">
         </video>
     </div>
 
@@ -41,6 +43,24 @@
             비디오요소.play() ~ 비디오 재생하기
             비디오요소.pause() ~ 비디오 일시정지
         */
+
+        const loadBtn = document.querySelector('.load');
+        const playBtn = document.querySelector('.play');
+        const pauseBtn = document.querySelector('.pause');
+        const vid = document.querySelector('video');
+
+        loadBtn.onclick = () => {
+            // 비디오를 처음 상태로 -> 비디오 정지
+            vid.load();
+        };
+        playBtn.onclick = () => {
+            // 비디오 실행
+            vid.play();
+        };
+        pauseBtn.onclick = () => {
+            // 비디오 일시정지
+            vid.pause();
+        };
 
     </script>
 </body>

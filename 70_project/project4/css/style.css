@@ -6,27 +6,113 @@
 body {
     overflow-y: hidden;
 }
+
 .sec {
     height: 100vh;
 }
 
-#sec1 {
-    background: darkblue;
+/* #header */
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9999;
+    position: fixed;
+    width: 100%;
+    padding: 0 50px;
+    transition: .3s;
 }
 
-#sec2 {
-    background: darkcyan;
+#header:hover {
+    background: #0f2244;
+    line-height: 20px;
 }
 
-#sec3 {
-    background: darkgoldenrod;
+#header::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 95px;
+    width: 100%;
+    height: 0;
+    background: #fff;
+    transition: .5s ease-out;
 }
 
-#sec4 {
-    background: darkorchid;
+#header:hover::after {
+    height: 200px;
 }
 
-/* 헤더 */
+/* logo */
+#header .logo {
+    width: 207px;
+}
+
+#header .inner {
+    height: 95px;
+    margin: 0 auto;
+}
+
+#gnb {
+    position: relative;
+    z-index: 1;
+    height: 95px;
+    overflow: hidden;
+    text-align: center;
+    transition: 0.4s ease-in-out;
+}
+
+#header:hover #gnb {
+    height: 295px;
+}
+
+/* depth1 */
+#gnb .main {
+    display: flex;
+}
+
+#gnb .main>li {
+    text-align: center;
+    line-height: 95px;
+}
+
+#gnb .main>li>a {
+    position: relative;
+}
+
+/* depth2 */
+.sub li {
+    line-height: 2;
+    margin: 4px 8px;
+}
+
+.sub a {
+    display: block;
+    color: #000;
+}
+
+/* sns */
+.util {
+    display: flex;
+}
+
+#header .member {
+    display: flex;
+    margin: 0 16px;
+}
+
+#header .member li {
+    margin: 0 16px;
+}
+
+#header .sns:hover {}
+
+/* section */
+section {
+    height: 100vh;
+    overflow: hidden;
+}
+
 /* 섹션1 */
 /* 캐로셀(carousel) */
 #slideWrap {
@@ -111,12 +197,132 @@ body {
 }
 
 /* 섹션2 */
+#sec2 {
+    position: relative;
+}
+
+#sec2 h2 {
+    font-size: 4.4rem;
+    text-align: center;
+}
+
+#sec2 p {
+    text-align: center;
+    padding-bottom: 48px;
+}
+
+#sec2 .container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 1400px;
+    height: 700px;
+}
+
+/* tab button */
+#tabs .btn {
+    z-index: 9999;
+    position: absolute;
+    right: 335px;
+}
+
+#tabs .btn a {
+    /* 버튼의 공통 글자 색 */
+    color: #555;
+}
+
+#tabs .btn li.on a {
+    /* li 중에서 on 클래스가 있는 것만 글자 색 변경 */
+    color: #007fa8;
+}
+
+#tabs .btn li {
+    display: inline-block;
+    padding: 8px;
+}
+
+/* 
+    li+li란? 첫 번째 li빼고 나머지
+    li:nth-of-type(1) ~ li    
+*/
+#tabs .btn li+li::before {
+    content: '|';
+    margin-right: 20px;
+}
+
+/*  탭 내용 */
+#tabs div {
+    /* 모두 숨김 */
+    display: none;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: absolute;
+    width: 1120px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#tabs div.on {
+    /* 4개 중 하나만 보임 */
+    display: flex;
+}
+
+#tabs figure {
+    flex-shrink: 0;
+    /* 큰 이미지 크기 */
+    width: 224px;
+}
+
+#tabs figure:first-of-type {
+    /* 1위 이미지만 크게 다시 지정 */
+    width: 576px;
+}
+
+#tabs figcaption {
+    /* 모든 캡션의 글자 크기 */
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: -1.4px;
+    margin: 8px 0;
+}
+
+#tabs figure:first-of-type figcaption {
+    position: absolute;
+    /* 왼쪽 맞춤 때문에 left로 지정해야함 */
+    left: 633px;
+    top: 60px;
+    /* 1위 캡션의 글자 크기 재설정 */
+    font-size: 4rem;
+    letter-spacing: -1.8px;
+}
+
+#tabs figure:first-of-type::after {
+    content: "1위";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    background: #007fa8;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+#tabs figure:first-of-type+figure {
+    margin-left: 30px;
+}
+
 /* 섹션3 */
 /* 패럴렉스 이미지 */
 #sec3 {
     position: relative;
     background: url(../images/230814_1_pc_pick_bg.jpg) no-repeat 50% 50%/cover fixed;
 }
+
 #sec3 .container {
     display: flex;
     justify-content: space-between;
@@ -126,16 +332,19 @@ body {
     transform: translate(-50%, -50%);
     width: 1400px;
 }
+
 #sec3 .des {
     width: 400px;
     text-align: right;
 }
+
 #sec3 .tit1 {
     transform: translateX(-400px);
     transition: 1.5s;
     opacity: 0;
 
 }
+
 #sec3 .tit2 {
     margin: 48px 0;
     transform: translateX(-400px);
@@ -143,10 +352,12 @@ body {
     opacity: 0;
 
 }
+
 #sec3 .tit2 p:first-of-type {
     line-height: 1.3;
     margin-bottom: 16px;
 }
+
 /* 고스트 버튼 */
 #sec3 .proBtn {
     border: 2px solid #fff;
@@ -155,6 +366,7 @@ body {
     opacity: 0;
     transition: 1.5s;
 }
+
 /* 상품 이미지 */
 #product {
     /* 요소의 텍스트 숨기기 */
@@ -163,5 +375,78 @@ body {
     height: 575px;
     background: url(../images/autumn_img.png) no-repeat 0 0/contain;
 }
+
 /* 섹션4 */
+#sec4 {
+    position: relative;
+    background: #9eb9e7;
+}
+
+#sec4 .container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#sec4 h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+#sec4 p:first-of-type {
+    margin-bottom: 48px;
+}
+
+/* 비디오 */
+.vid {
+    position: relative;
+    width: 780px;
+    margin: 0 auto 48px;
+}
+
+/* 비디오 플레이어 버튼 */
+.vid .btn {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    display: none;
+    /* span의 수직 중앙 맞춤을 위해 적당히! */
+    padding-top: 30px;
+}
+
+/* 일시 정지 버튼 모양 */
+.vid .btn span {
+    display: inline-block;
+    width: 10px;
+    height: 40px;
+    background: #fff;
+    margin: 0 6px;
+}
+
+.vid .btn span.on {
+    width: 0;
+    height: 0;
+    margin-left: 15px;
+    background: transparent;
+
+    /* 보더로 삼각형 만들기 */
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 30px solid #fff;
+    border-right: 0px solid transparent;
+}
+
+.vid .btn span.on+span {
+    display: none;
+}
+
 /* 푸터 */
