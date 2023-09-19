@@ -8,7 +8,7 @@
                 문자열.toLowerCase() ~ 문자열을 소문자로 변환
         */
 
-        const ua = navigator.userAgent.toLocaleLowerCase;
+        const ua = navigator.userAgent.toLowerCase();
 
         if (ua.indexOf('window') > 0) {
             // ua에 window 문자열이 있으면 데스크탑
