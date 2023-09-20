@@ -408,31 +408,17 @@
         const out1 = qs('.outer1');
         const out2 = qs('.outer2');
 
-        out1.onmouseover = mover2;
-        out1.onmouseout = mout2;
-        out2.onmouseover = mover1;
-        out2.onmouseout = mout1;
-
-        function mover1() {
-            let m;
-            m = out1
-            m.style.background = ('#fff');
-            color = ('#000')
+        out1.onmouseenter = () => {
+            out2.style.background = ('#fff');
+            out1.style.background = "url('../images/sub3/bg_nation.jpg')";
+            out1.style.color = '#fff';
+            out2.style.color = '#000';
         }
-        function mout1() {
-            let m;
-            m = out2;
-            m.style.backgroundImage = "url('../images/sub3/bg_store.jpg')";
-        }
-        function mover2() {
-            let m;
-            m = out2;
-            m.style.background = ('#fff');
-        }
-        function mout2() {
-            let m;
-            m = out1;
-            m.style.backgroundImage = "url('../images/sub3/bg_nation.jpg')";
+        out2.onmouseenter = () => {
+            out1.style.background = ('#fff');
+            out2.style.background = "url('../images/sub3/bg_store.jpg')";
+            out2.style.color = '#fff';
+            out1.style.color = '#000';
         }
 
         /* 애니메이션 페이드인 */
